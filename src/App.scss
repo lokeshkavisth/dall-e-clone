@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+$main-bg: #242424;
+$secondary-bg: #313131;
+
+$main-text: rgba(255, 255, 255, 0.87);
+$secondry-text: #808080;
+$border-color: rgba(66, 66, 66, 0.637);
+
+$ff-roboto: "Roboto", sans-serif;
+$fw-r: 400;
+$fw-m: 500;
+$fw-b: 700;
+
+* {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  list-style: none;
+  color: $main-text;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: $ff-roboto;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  font-size: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  max-width: max-content;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: inherit;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  vertical-align: baseline;
+  background-color: $main-bg;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.409rem;
+}
+::-moz-scrollbar {
+  width: 0.409rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-moz-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: $secondry-text;
+}
+::-moz-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: $secondry-text;
+}
+
+// header
+header {
+  background-color: $secondary-bg;
+  padding: 1rem;
+
+  nav {
+    max-width: 100rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav__logo {
+      a {
+        font-size: clamp(1rem, 10vw, 2rem);
+      }
+    }
+
+    .nav__links {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        li {
+          a {
+            img {
+              width: 2rem;
+              transition: 0.3s ease;
+
+              &:is(:hover, :focus-visible) {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// main
+main {
+  padding: 0 1rem;
+  article {
+    max-width: 90rem;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+
+    > h1 {
+      font-size: clamp(3rem, 10vw, 4rem);
+      margin: 4rem 0 1rem;
+      font-weight: $fw-m;
+    }
+    > p {
+      line-height: 1.5;
+      color: $secondry-text;
+    }
+
+    #userinput {
+      border: 2px solid $border-color;
+      max-width: 25rem;
+      margin: 10rem 0 1rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.256rem;
+
+      &:is(:hover, :focus-visible) {
+        background-color: $secondary-bg;
+      }
+    }
+
+    img {
+      max-width: 500px;
+      background: #000;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      margin: 1rem 0 2rem;
+      padding: 0.85rem 1.2rem;
+      background-color: $secondary-bg;
+      border-radius: 0.3rem;
+      transition: 0.1s ease;
+
+      &:is(:hover, :focus-visible) {
+        background-color: $border-color;
+      }
+
+      &:active {
+        background: #80808049;
+      }
+    }
+
+    .warning {
+      margin-bottom: 10rem;
+      p {
+        border-bottom: 1px solid rgb(255, 0, 234);
+      }
+    }
+  }
+}
+
+// footer
+footer {
+  background: $secondary-bg;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  div {
+    border-top: 1px solid $border-color;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+
+    max-width: 100rem;
+    margin-inline: auto;
+
+    p {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.3rem;
+
+      b {
+        a {
+          color: rgb(255, 100, 234);
+          font-weight: $fw-b;
+        }
+      }
+    }
+  }
+}
