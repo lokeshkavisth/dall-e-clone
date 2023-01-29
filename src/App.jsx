@@ -90,7 +90,7 @@ function App() {
             </b>{" "}
             and Powred By{" "}
             <b>
-              <a href="">OpenAI</a>
+              <a href="https://openai.com/dall-e-2/">OpenAI</a>
             </b>
           </p>
         </div>
